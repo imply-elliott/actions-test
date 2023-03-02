@@ -8,3 +8,4 @@ jobs:
         run: |
           docker info
           sudo systemctl status docker.service
+          sudo cat /lib/systemd/system/docker.service
