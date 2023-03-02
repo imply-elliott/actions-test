@@ -1,0 +1,7 @@
+on:
+  push
+  workflow_call
+
+jobs:
+  test_docker:
+    run: docker info
