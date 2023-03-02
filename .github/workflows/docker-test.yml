@@ -2,4 +2,6 @@ on: [push, workflow_call]
 
 jobs:
   test_docker:
-    run: docker info
+    runs-on: ubuntu-latest
+    steps:
+      - run: docker info
