@@ -4,6 +4,7 @@ jobs:
   test_docker:
     runs-on: ubuntu-latest
     steps:
-      - run: |
-        docker info
-        sudo systemctl status docker.service
+      - name: test
+        run:
+          docker info
+          sudo systemctl status docker.service
