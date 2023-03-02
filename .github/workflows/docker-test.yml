@@ -9,4 +9,5 @@ jobs:
           docker info
           sudo systemctl status docker.service
           sudo cat /lib/systemd/system/docker.service
+          ls /etc/docker
           sudo cat /etc/docker/*
