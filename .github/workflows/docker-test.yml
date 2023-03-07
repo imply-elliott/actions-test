@@ -7,7 +7,6 @@ jobs:
       - name: test
         run: |
           sudo cat /etc/default/grub
-          sudo cat /boot/firmware/nobtcmd.txt
           docker info
           sudo systemctl status docker.service
           sudo cat /lib/systemd/system/docker.service
@@ -18,3 +17,8 @@ jobs:
           echo "more info"
           curl -H Metadata:true --noproxy "*" "http://169.254.169.254/metadata/instance/compute?api-version=2020-09-01"
           ls -l /var/lib/cloud/instance/scripts/
+      - name: minik8s
+        run: |
+          sudo snap install microk8s --classic --channel=1.25/stable
+          sudo microk8s status -w
+          sudo microk8s inspect
