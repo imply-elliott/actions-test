@@ -7,6 +7,7 @@ jobs:
       - name: test
         run: |
           sudo cat /etc/default/grub
+          sudo cat /boot/firmware/nobtcmd.txt
           docker info
           sudo systemctl status docker.service
           sudo cat /lib/systemd/system/docker.service
