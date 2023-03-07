@@ -6,6 +6,7 @@ jobs:
     steps:
       - name: test
         run: |
+          sudo cat /etc/default/grub
           docker info
           sudo systemctl status docker.service
           sudo cat /lib/systemd/system/docker.service
