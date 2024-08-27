@@ -1,0 +1,8 @@
+on: 
+  push:
+
+jobs:
+  call-shared-echo-workflow:
+    uses: imply-elliott/actions-test/.github/workflows/shared-workflow-test.yml@main
+    with:
+      HELLO_WORLD: elliott
